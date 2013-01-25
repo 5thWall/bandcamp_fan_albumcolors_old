@@ -1,0 +1,10 @@
+{
+  "name": "Bandcamp Fanpage Albumcolors",
+  "description": "Addes Albumcolors to Bandcamp.com Fanpages",
+  "menifest_version": 2,
+  "version": "0.0.1",
+  "content_scripts": [{
+    "matches": ["http://bandcamp.com/*"],
+    "js": ["albumcolors.js"]
+  }]
+}
