@@ -1,10 +1,14 @@
-albumArt = $ 'img.collection-item-art'
+containers = $ 'li.collection-item-container'
 
 logColors = (response) ->
-  console.log "Colors recieved"
   console.log response
 
-albumArt.each ->
-  imgSrc = $(@).attr 'src'
-  console.log "Getting colors for #{imgSrc}"
-  chrome.extension.sendMessage {"src": imgSrc}, logColors
+getArtSrc = (container) ->
+  art = $(container).find 'img.collection-item-art'
+  imgSrc = $(art[0]).attr 'src'
+
+containers.each ->
+  artSrc = getArtSrc @
+  if artSrc?
+    console.log "Getting art: #{artSrc}"
+    chrome.extension.sendMessage {"src": artSrc}, logColors
