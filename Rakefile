@@ -14,8 +14,8 @@ end
 desc "Build the extension in the 'extension' directory"
 task :build => ['extension', *JS] do
    cp File.join('src', 'manifest.json'), 'extension'
-   cp File.join('src', 'albumcolors.js'), 'extension'
-   cp File.join('src', 'jquery.js'), 'extension'
+   cp File.join('lib', 'albumcolors.js'), 'extension'
+   cp File.join('lib', 'jquery.js'), 'extension'
 end
 
 desc "Package the extension"
