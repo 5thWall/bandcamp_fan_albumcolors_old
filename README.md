@@ -11,7 +11,7 @@ using [albumcolors.js][albumcolors] by Chengyin Liu ([@chengyin][chengyin]).
 License
 =======
 
-Both `src/jquery.js` and `src/albumcolors.js` are have their own licences, all
+Both `lib/jquery.js` and `lib/albumcolors.js` are have their own licences, all
 else:
 
 Copyright (C) 2013  Andrew Arminio
