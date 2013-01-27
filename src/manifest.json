@@ -7,6 +7,10 @@
   "minimum_chrome_version": "22",
   "content_scripts": [{
     "matches": ["http://bandcamp.com/*"],
-    "js": ["jquery.js","albumcolors.js","app.js"]
-  }]
+    "js": ["jquery.js","app.js"]
+  }],
+  "background": {
+    "scripts": ["albumcolors.js","background.js"],
+    "persistent": false
+  }
 }
