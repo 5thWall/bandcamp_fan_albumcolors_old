@@ -1,14 +1,22 @@
 containers = $ 'li.collection-item-container'
 
-logColors = (response) ->
-  console.log response
-
 getArtSrc = (container) ->
   art = $(container).find 'img.collection-item-art'
   imgSrc = $(art[0]).attr 'src'
 
+getRGBColor = (color) ->
+  "rgb(#{color})"
+
+applyColors = (response) ->
+  console.log "Applying colors to #{response.id}"
+  container = $ "##{response.id}"
+  rgb = getRGBColor response.colors[0]
+  console.log "Setting background color to #{rgb}"
+  container.css "background-color", rgb
+
 containers.each ->
-  artSrc = getArtSrc @
-  if artSrc?
-    console.log "Getting art: #{artSrc}"
-    chrome.extension.sendMessage {"src": artSrc}, logColors
+  req =
+    src: getArtSrc @
+  if req.src?
+    req.id = $(@).attr "id"
+    chrome.extension.sendMessage req, applyColors
