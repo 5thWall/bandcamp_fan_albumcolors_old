@@ -16,7 +16,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 {
   "name": "Bandcamp Fanpage Albumcolors",
-  "description": "Addes Albumcolors to Bandcamp.com Fanpages",
+  "description": "Adds Albumcolors to Bandcamp.com Fanpages",
   "manifest_version": 2,
   "version": "0.0.1",
   "permissions": ["http://*/*"],
