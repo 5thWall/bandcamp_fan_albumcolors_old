@@ -18,7 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   "name": "Bandcamp Fanpage Albumcolors",
   "description": "Adds Albumcolors to Bandcamp.com Fanpages",
   "manifest_version": 2,
-  "version": "0.0.1",
+  "version": "0.0.3",
   "permissions": ["http://*/*"],
   "minimum_chrome_version": "22",
   "content_scripts": [{
