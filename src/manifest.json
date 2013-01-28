@@ -19,7 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   "description": "Adds Albumcolors to Bandcamp.com Fanpages",
   "manifest_version": 2,
   "version": "0.0.3",
-  "permissions": ["http://*/*"],
+  "permissions": ["http://*.bcbits.com/*"],
   "minimum_chrome_version": "22",
   "content_scripts": [{
     "matches": ["http://bandcamp.com/*"],
