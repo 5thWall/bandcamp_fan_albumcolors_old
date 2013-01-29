@@ -13,12 +13,16 @@ Building
 
  Clone the repository.
 
-    git clone git://github.com/5thWall/bandcamp_fan_albumcolors.git
-    cd bandcamp_fan_albumcolors
+```shell
+git clone git://github.com/5thWall/bandcamp_fan_albumcolors.git
+cd bandcamp_fan_albumcolors
+```
 
 Use `rake` task to build the extension.
 
-    rake build
+```shell
+rake build
+```
 
 Open up Extensions in Chrome, and ensure the `Developer Mode` check-box is
 checked.
@@ -27,7 +31,9 @@ Click `Load unpacked extension...` and select the `extension` directory.
 
 You can also use the `package` task to create a packaged extension.
 
-    rake package
+```shell
+rake package
+```
 
 Requirements
 ------------
