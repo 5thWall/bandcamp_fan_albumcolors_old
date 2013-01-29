@@ -18,15 +18,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   "name": "Bandcamp Fanpage Albumcolors",
   "description": "Adds Albumcolors to Bandcamp.com Fanpages",
   "manifest_version": 2,
-  "version": "0.0.3",
+  "version": "0.1.0",
   "permissions": ["http://*.bcbits.com/*"],
   "minimum_chrome_version": "22",
   "content_scripts": [{
     "matches": ["http://bandcamp.com/*"],
-    "js": ["jquery.js","app.js"]
+    "js": ["lib/jquery.js","app.js"]
   }],
   "background": {
-    "scripts": ["albumcolors.js","background.js"],
+    "scripts": ["lib/albumcolors.js","background.js"],
     "persistent": false
   }
 }

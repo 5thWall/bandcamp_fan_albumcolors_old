@@ -24,12 +24,28 @@ getArtSrc = (container) ->
 getRGBColor = (color) ->
   "rgb(#{color})"
 
+setBackground = (item, color) ->
+  item.css "background-color", color
+
+setColor = (item, color) ->
+  item.css "color", color
+
+getPrimaryText = (container) ->
+  container.find "div.collection-item-title,span.favoriteTrackLabel"
+
+getSecondaryText = (container) ->
+  container.find "div.collection-item-artist,a.fav-track-link,span.fav-track-static"
+
 applyColors = (response) ->
-  console.log "Applying colors to #{response.id}"
   container = $ "##{response.id}"
-  rgb = getRGBColor response.colors[0]
-  console.log "Setting background color to #{rgb}"
-  container.css "background-color", rgb
+  console.log $(container.find('div.collection-item-title')[0]).text()
+  color = (getRGBColor c for c in response.colors)
+  console.log color
+  setBackground container, color[0]
+  primaryText = getPrimaryText container
+  setColor primaryText, color[1]
+  secondaryText = getSecondaryText container
+  setColor secondaryText, color[2]
 
 containers.each ->
   req =
