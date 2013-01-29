@@ -4,7 +4,7 @@ JS = COFFEE.ext 'js'
 directory 'extension'
 
 rule '.js' => ['.coffee', 'extension'] do |t|
-  `coffee -c -o extension #{t.source}`
+  sh "coffee -c -o extension #{t.source}"
 end
 
 file 'package.zip' => [:build] do
