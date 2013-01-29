@@ -28,6 +28,13 @@ Click `Load unpacked extension...` and select the `extension` directory.
 You can also use the `package` task to create a packaged extension.
 
     rake package
+    
+Requirements
+============
+
+This project requires [Coffeescript][cs] to build.
+
+[cs][http://coffeescript.org]
 
 License
 =======
