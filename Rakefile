@@ -12,10 +12,12 @@ file 'package.zip' => [:build] do
 end
 
 desc "Build the extension in the 'extension' directory"
-task :build => ['extension', *JS] do
+task :build => ['extension', :lib, *JS] do
    cp File.join('src', 'manifest.json'), 'extension'
-   cp File.join('lib', 'albumcolors.js'), 'extension'
-   cp File.join('lib', 'jquery.js'), 'extension'
+end
+
+task :lib => ['extension'] do
+  cp_r 'lib', 'extension'
 end
 
 desc "Package the extension"
