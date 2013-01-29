@@ -34,7 +34,7 @@ Requirements
 
 This project requires [Coffeescript][cs] to build.
 
-[cs][http://coffeescript.org]
+[cs]: http://coffeescript.org
 
 License
 =======
