@@ -11,18 +11,19 @@ using [albumcolors.js][albumcolors] by Chengyin Liu ([@chengyin][chengyin]).
 Building
 ========
 
- * Clone the repository.
+ Clone the repository.
 
     git clone git://github.com/5thWall/bandcamp_fan_albumcolors.git
     cd bandcamp_fan_albumcolors
 
- * Use `rake` task to build the extension.
+Use `rake` task to build the extension.
 
     rake build
 
- * Open up Extensions in Chrome, and ensure the `Developer Mode` checkbox is
+Open up Extensions in Chrome, and ensure the `Developer Mode` checkbox is
 checked.
- * Click `Load unpacked extension...` and select the `extension` directory.
+
+Click `Load unpacked extension...` and select the `extension` directory.
 
 You can also use the `package` task to create a packaged extension.
 
