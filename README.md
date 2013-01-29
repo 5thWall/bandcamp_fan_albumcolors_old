@@ -20,7 +20,7 @@ Use `rake` task to build the extension.
 
     rake build
 
-Open up Extensions in Chrome, and ensure the `Developer Mode` checkbox is
+Open up Extensions in Chrome, and ensure the `Developer Mode` check-box is
 checked.
 
 Click `Load unpacked extension...` and select the `extension` directory.
@@ -28,7 +28,7 @@ Click `Load unpacked extension...` and select the `extension` directory.
 You can also use the `package` task to create a packaged extension.
 
     rake package
-    
+
 Requirements
 ============
 
@@ -39,7 +39,7 @@ This project requires [Coffeescript][cs] to build.
 License
 =======
 
-Both `lib/jquery.js` and `lib/albumcolors.js` are have their own licences, all
+Both `lib/jquery.js` and `lib/albumcolors.js` are have their own licenses, all
 else:
 
 Copyright (C) 2013  Andrew Arminio
