@@ -34,7 +34,7 @@ getPrimaryText = (container) ->
   container.find "div.collection-item-title,span.favoriteTrackLabel"
 
 getSecondaryText = (container) ->
-  container.find "div.collection-item-artist,a.fav-track-link,span.fav-track-static"
+  container.find "div.collection-item-artist,a.fav-track-link,span.fav-track-static,div.secondaryText"
 
 applyColors = (response) ->
   container = $ "##{response.id}"
