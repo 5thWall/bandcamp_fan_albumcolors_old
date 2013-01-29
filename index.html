@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Bandcamp fan albumcolors by 5thWall</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Bandcamp fan albumcolors</h1>
+        <p class="header">Chrome extension to add album colors to bandcamp fan pages</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/5thWall/bandcamp_fan_albumcolors/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/5thWall/bandcamp_fan_albumcolors/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/5thWall/bandcamp_fan_albumcolors">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/5thWall">5thWall</a></p>
+
+
+      </header>
+      <section>
+        <h1>Bandcamp Fanpage Albumcolors</h1>
+
+<p>This chrome extension adds albumcolors to fan pages on <a href="http://bandcamp.com">bandcamp.com</a>
+using <a href="https://github.com/chengyin/albumcolors">albumcolors.js</a> by Chengyin Liu (<a href="https://github.com/chengyin">@chengyin</a>).</p>
+
+<h2>Building</h2>
+
+<p>Clone the repository.</p>
+
+<div class="highlight"><pre>git clone git://github.com/5thWall/bandcamp_fan_albumcolors.git
+<span class="nb">cd </span>bandcamp_fan_albumcolors
+</pre></div>
+
+<p>Use <code>rake</code> task to build the extension.</p>
+
+<div class="highlight"><pre>rake build
+</pre></div>
+
+<p>Open up Extensions in Chrome, and ensure the <code>Developer Mode</code> check-box is
+checked.</p>
+
+<p>Click <code>Load unpacked extension...</code> and select the <code>extension</code> directory.</p>
+
+<p>You can also use the <code>package</code> task to create a packaged extension.</p>
+
+<div class="highlight"><pre>rake package
+</pre></div>
+
+<h2>Requirements</h2>
+
+<p>This project requires <a href="http://coffeescript.org">Coffeescript</a> to build.</p>
+
+<h2>License</h2>
+
+<p>Both <code>lib/jquery.js</code> and <code>lib/albumcolors.js</code> are have their own licenses, all
+else:</p>
+
+<p>Copyright (C) 2013  Andrew Arminio</p>
+
+<p>This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.</p>
+
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.</p>
+
+<p>You should have received a copy of the GNU General Public License
+along with this program.  If not, see <a href="http://www.gnu.org/licenses/"></a><a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.</p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
