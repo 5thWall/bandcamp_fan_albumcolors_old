@@ -9,7 +9,7 @@ using [albumcolors.js][albumcolors] by Chengyin Liu ([@chengyin][chengyin]).
 [chengyin]: https://github.com/chengyin
 
 Building
-========
+--------
 
  Clone the repository.
 
@@ -30,14 +30,14 @@ You can also use the `package` task to create a packaged extension.
     rake package
 
 Requirements
-============
+------------
 
 This project requires [Coffeescript][cs] to build.
 
 [cs]: http://coffeescript.org
 
 License
-=======
+-------
 
 Both `lib/jquery.js` and `lib/albumcolors.js` are have their own licenses, all
 else:
