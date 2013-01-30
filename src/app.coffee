@@ -47,9 +47,14 @@ applyColors = (response) ->
   secondaryText = getSecondaryText container
   setColor secondaryText, color[2]
 
-containers.each ->
+albumcolorify = (item) ->
   req =
-    src: getArtSrc @
+    src: getArtSrc item
+
   if req.src?
-    req.id = $(@).attr "id"
+    req.id = $(item).attr "id"
     chrome.extension.sendMessage req, applyColors
+
+containers.each ->
+  albumcolorify @
+
