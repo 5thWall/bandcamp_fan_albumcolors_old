@@ -16,6 +16,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###
 
 containers = $ 'li.collection-item-container'
+lazy = $ 'li.lazy'
 
 getArtSrc = (container) ->
   art = $(container).find 'img.collection-item-art'
@@ -57,4 +58,13 @@ albumcolorify = (item) ->
 
 containers.each ->
   albumcolorify @
+
+lazy.each ->
+  console.log "Setting up lazy loading for %s", $(@).attr("id")
+  observer = new WebKitMutationObserver =>
+    console.log "Observed change in %s", $(@).attr("id")
+    $(@).find("img").load =>
+      albumcolorify @
+
+  observer.observe @, {childList: true}
 
