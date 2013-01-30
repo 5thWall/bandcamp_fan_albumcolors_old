@@ -39,9 +39,7 @@ getSecondaryText = (container) ->
 
 applyColors = (response) ->
   container = $ "##{response.id}"
-  console.log $(container.find('div.collection-item-title')[0]).text()
   color = (getRGBColor c for c in response.colors)
-  console.log color
   setBackground container, color[0]
   primaryText = getPrimaryText container
   setColor primaryText, color[1]
@@ -60,11 +58,8 @@ containers.each ->
   albumcolorify @
 
 lazy.each ->
-  console.log "Setting up lazy loading for %s", $(@).attr("id")
   observer = new WebKitMutationObserver =>
-    console.log "Observed change in %s", $(@).attr("id")
     $(@).find("img").load =>
       albumcolorify @
 
   observer.observe @, {childList: true}
-
