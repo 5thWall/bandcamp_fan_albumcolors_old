@@ -8,7 +8,7 @@ rule '.js' => ['.coffee', 'extension'] do |t|
 end
 
 file 'package.zip' => [:build] do
-  `zip package.zip extension/*`
+  `zip -r package.zip extension/*`
 end
 
 desc "Build the extension in the 'extension' directory"
