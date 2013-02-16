@@ -19,8 +19,8 @@ containers = $ 'li.collection-item-container'
 lazy = $ 'li.lazy'
 
 getArtSrc = (container) ->
-  art = $(container).find 'img.collection-item-art'
-  imgSrc = $(art[0]).attr 'src'
+  art = ($ container).find 'img.collection-item-art'
+  imgSrc = ($ art[0]).attr 'src'
 
 getRGBColor = (color) ->
   "rgb(#{color})"
@@ -51,7 +51,7 @@ albumcolorify = (item) ->
     src: getArtSrc item
 
   if req.src?
-    req.id = $(item).attr "id"
+    req.id = ($ item).attr "id"
     chrome.extension.sendMessage req, applyColors
 
 containers.each ->
@@ -59,7 +59,7 @@ containers.each ->
 
 lazy.each ->
   observer = new WebKitMutationObserver =>
-    $(@).find("img").load =>
+    (($ @).find "img").load =>
       albumcolorify @
 
   observer.observe @, {childList: true}
